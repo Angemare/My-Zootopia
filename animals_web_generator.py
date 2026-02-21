@@ -36,15 +36,6 @@ for animal in animals_data:
         print("Type:", type_value)
 
 
-
-
-
-
-    #print("Name:", animal['name'])
-    #print("Diet:", animal['characteristics']['diet'])
-    #print("Location:", animal['locations'][0])
-
-    #print("Type:", animal['characteristics']['type'])
     print("")
 
 
