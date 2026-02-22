@@ -32,31 +32,31 @@ output = ''
 for animal in animals_data:
 
     #append information to each string
-    output += '<li class= "cards__item">\n'
+    output += '<li class="cards__item">\n'
 
     name = animal.get('name', {})
     name_value = animal.get('name', 'unknown')
     if name_value != 'unknown':
-        output += f"Name: {name_value}<br/>\n"
+        output += f"<div class='card__title'> {name_value}</div><br/>\n"
         #print("Name:", name_value)
-
+    output += '<p class="card__text">'
     characteristics = animal.get('characteristics', {})
     diet_value = characteristics.get('diet', 'unknown')
     if diet_value != 'unknown':
-        output += f"Diet: {diet_value}<br/>\n"
+        output += f"<strong>Diet:</strong> {diet_value}<br/>\n"
         #print("Diet:", diet_value)
 
     locations = animal.get('locations', {})
     locations_value = animal.get('locations', 'unknown')
     if locations_value != 'unknown':
-        output += f"Location: {locations_value[0]}<br/>\n"
+        output += f"<strong>Location:</strong> {locations_value[0]}<br/>\n"
         #print("Locations:", locations_value[0])
 
     characteristics = animal.get('characteristics',{})
     type_value = characteristics.get('type', 'unknown')
     if type_value != 'unknown':
-        output += f"Type: {type_value}<br/>\n"
-    output += "</li>\n"
+        output += f"<strong>Type:</strong> {type_value}<br/>\n"
+    output += "</p></li>\n"
         #print("Type:", type_value)
 
 print(output)
