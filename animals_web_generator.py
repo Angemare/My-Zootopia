@@ -53,8 +53,10 @@ def serialize_animal(animal_obj):
 
 def main():
     """ main function - function call """
+
 # create empty string
 output = ''
+
 # Task - iterate thru list + print: NAME, DIET, 1st LOCATION, TYPE (if given)
 for animal in animals_data:
     output += serialize_animal(animal)
@@ -63,7 +65,7 @@ for animal in animals_data:
 new_html = animals_template.replace("__REPLACE_ANIMALS_INFO__", output )
 print(new_html)
 
-# write HTML in a function
+# write HTML
 with open("animals.html","w", encoding="UTF-8") as handle:
     handle.write(new_html)
 
