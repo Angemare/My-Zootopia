@@ -2,23 +2,25 @@
 # Javascript Object Notation
 import json
 
+# constants
+JSON_FILE = 'animals_data.json'
+OLD_HTML_FILE = 'animals_template.html'
+NEW_HTML_FILE = 'animals.html'
+REPLACE_INFO = '__REPLACE_ANIMALS_INFO__'
+
+
+
 # opens json file, with open r for read the file
 def load_data(file_path):
     """ Loads a JSON file """
     with open(file_path, "r") as handle:
         return json.load(handle)
 
-# print json list - nested structure
-animals_data = load_data('animals_data.json')
-
 # read content of the template html
 def read_html(file_path):
     """ loads html file """
     with open(file_path, "r", encoding="UTF-8") as handle:
         return handle.read()
-
-# Create string - reading animals data from new html "animals.html"
-animals_template = read_html('animals_template.html')
 
 # Create a function
 def serialize_animal(animal_obj):
@@ -54,20 +56,26 @@ def serialize_animal(animal_obj):
 def main():
     """ main function - function call """
 
-# create empty string
-output = ''
+    # print json list - nested structure
+    animals_data = load_data(JSON_FILE)
 
-# Task - iterate thru list + print: NAME, DIET, 1st LOCATION, TYPE (if given)
-for animal in animals_data:
-    output += serialize_animal(animal)
+    # Create string - reading animals data from new html "animals.html"
+    animals_template = read_html(OLD_HTML_FILE)
 
-# replace old html with new html
-new_html = animals_template.replace("__REPLACE_ANIMALS_INFO__", output )
-print(new_html)
+    # create empty string
+    output = ''
 
-# write HTML
-with open("animals.html","w", encoding="UTF-8") as handle:
-    handle.write(new_html)
+    # Task - iterate through list + print: NAME, DIET, 1st LOCATION, TYPE (if given)
+    for animal in animals_data:
+        output += serialize_animal(animal)
+
+    # replace old html with new html
+    new_html = animals_template.replace(REPLACE_INFO, output )
+    print(new_html)
+
+    # write HTML
+    with open(NEW_HTML_FILE,"w", encoding="UTF-8") as handle:
+        handle.write(new_html)
 
 if __name__ == "__main__":
     main()
