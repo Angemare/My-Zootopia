@@ -1,7 +1,4 @@
-# INFORMATION OF 19 DIFFERENT ANIMALS
-
-
-## Getting an overview of different type of animals with JSON and HTML in Python
+# Creating an overview of different types of animals with JSON and HTML in Python
 
 ## Using JSON "animals_data.json" in Python to get the following information: 
   - NAME
@@ -15,7 +12,7 @@
 ### write a new HTML file "animals.html"
 ### replace the above mentioned information from the JSON file in your new HTML
 
-### your overview of different type of animals and their NAME, DIET, 1st LOCATION and TYPE
+### your overview of 19 different types of animals and their NAME, DIET, 1st LOCATION and TYPE
 ### will look like this: 
 
 
