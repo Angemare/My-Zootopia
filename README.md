@@ -12,7 +12,7 @@
 ### write a new HTML file "animals.html"
 ### replace the above mentioned information from the JSON file in your new HTML
 
-### your overview of 19 different types of animals and their NAME, DIET, 1st LOCATION and TYPE
+### your overview of 19 different types of animals and information you got from the JSON 
 ### will look like this: 
 
 
