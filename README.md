@@ -7,7 +7,7 @@
   - TYPE
 
 ### read your JSON in Python to get the animals information you need in your Overview
-### create a function and get the data from the JSON file to add it in your empty list
+### create a function and get the data from the JSON file and add it in your empty list
 ### open your old html file "animals_template.html" in python to read the content  
 ### write a new HTML file "animals.html"
 ### replace the above mentioned information from the JSON file in your new HTML
